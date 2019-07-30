@@ -52,10 +52,13 @@ class App extends React.Component {
   }
 }
 
+//used to get updated data from redux state. It willautomatically call when state is updated.
 const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 })
 
+
+//used to call action to modify redux state 
 const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 })
